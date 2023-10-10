@@ -58,6 +58,8 @@ export default function Page({ page }: { page: BuilderContent | null }) {
     return <DefaultErrorPage statusCode={404} />
   }
 
+  const sectionsNames = page?.data?.blocks?.map(block => block?.component?.name)
+
   // If the page content is available, render
   // the BuilderComponent with the page content
   return (
@@ -66,7 +68,7 @@ export default function Page({ page }: { page: BuilderContent | null }) {
         <title>{page?.data?.title}</title>
       </Head>
       {/* Render the Builder page */}
-      <Header />
+      <Header sectionsNames={sectionsNames} />
       <BuilderComponent model="page" content={page || undefined} />
     </>
   )

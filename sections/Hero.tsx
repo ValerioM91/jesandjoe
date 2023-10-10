@@ -11,7 +11,7 @@ type THero = {
 const Hero = ({ firstPersonName, secondPersonName, date, when, where }: THero) => {
   return (
     <section
-      id="home"
+      id="hero"
       className="relative flex items-center overflow-hidden bg-white px-4 pb-12 pt-20 md:py-32 lg:pt-40"
     >
       <Image

@@ -4,14 +4,14 @@
 
 html,
 body {
-  scroll-padding-top: 70px;
+  scroll-padding-top: 68px;
 }
 
 @media screen and (min-width: 640px) {
   html,
   body {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 75px;
   }
 }
 

@@ -39,12 +39,12 @@ Builder.registerComponent(Where, {
 })
 
 Builder.registerComponent(RichTextSection, {
-  tag: "section",
   name: "Rich Text Section",
   image: "https://tabler-icons.io/static/tabler-icons/icons-png/letter-case.png",
   inputs: [
     { name: "title", type: "string" },
     { name: "richText", type: "richText", friendlyName: "content" },
+    { name: "id", type: "string" },
   ],
 })
 

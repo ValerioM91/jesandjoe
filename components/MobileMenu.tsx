@@ -1,6 +1,13 @@
+import type { TLink } from "@/types"
 import MenuLinks from "./MenuLinks"
 
-const MobileMenu = ({ isOpen, onClose }: { isOpen?: boolean; onClose: () => void }) => {
+type TMobileMenu = {
+  isOpen?: boolean
+  onClose: () => void
+  links?: TLink[]
+}
+
+const MobileMenu = ({ isOpen, links, onClose }: TMobileMenu) => {
   return (
     <div
       className={`fixed transition-all duration-500 ease-in-out ${
@@ -11,6 +18,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen?: boolean; onClose: () => void
         <ul className="flex h-full flex-col justify-center text-center">
           <MenuLinks
             onClick={onClose}
+            links={links}
             isMobile
             isOpen={isOpen}
             linkClass={`my-4 inline-block font-thin transition-opacity duration-200 ${
