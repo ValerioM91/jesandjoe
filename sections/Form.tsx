@@ -10,11 +10,11 @@ type TForm = {
 function Form({ subtitle, title, thankYouMessage }: TForm) {
   const [state, handleSubmit] = useForm("mzblybdv")
 
-  const labelClass = "text-white text-xl font-light md:text-3xl"
+  const labelClass = "text-white text-lg font-light md:text-xl lg:text-3xl"
 
   return (
     <section id="rsvp" className="bg-jes-green">
-      <div className="container mx-auto flex min-h-[20rem] max-w-[820px] flex-col justify-center px-4 py-16 text-lg">
+      <div className="container mx-auto flex min-h-[20rem] max-w-[820px] flex-col justify-center px-4 py-16 text-lg lg:py-20">
         {state.succeeded ? (
           <p className="text-center text-lg text-white md:text-3xl">{thankYouMessage || "Thank you!"}</p>
         ) : (

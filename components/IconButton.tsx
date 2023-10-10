@@ -1,14 +1,8 @@
-import type { MouseEventHandler } from 'react'
+type TIconButton = React.ComponentPropsWithoutRef<"button">
 
-interface Props {
-  children: React.ReactNode
-  className?: string
-  onClick: MouseEventHandler<HTMLButtonElement>
-}
-
-const IconButton = ({ children, className, onClick }: Props) => {
+const IconButton = ({ children, className, onClick }: TIconButton) => {
   return (
-    <button onClick={onClick} className={`text-3xl ${className ? ' ' + className : ''}`}>
+    <button onClick={onClick} className={`text-3xl ${className ? " " + className : ""}`}>
       {children}
     </button>
   )

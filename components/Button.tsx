@@ -1,11 +1,6 @@
-interface Props {
-  children: React.ReactNode
-  className?: string
-  type?: "button" | "submit" | "reset"
-  disabled?: boolean
-}
+type TButton = React.ComponentPropsWithoutRef<"button">
 
-const Button = ({ children, className, type, disabled }: Props) => {
+const Button = ({ children, className, type, disabled }: TButton) => {
   return (
     <button
       type={type || "button"}

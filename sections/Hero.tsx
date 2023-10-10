@@ -1,9 +1,8 @@
 import Image from "next/image"
 
 type THero = {
-  firstPersonName?: string
-  image?: string
-  secondPersonName?: string
+  firstPersonName: string
+  secondPersonName: string
   date?: string
   when?: string
   where?: string
@@ -11,7 +10,10 @@ type THero = {
 
 const Hero = ({ firstPersonName, secondPersonName, date, when, where }: THero) => {
   return (
-    <section id="home" className="relative flex items-center overflow-hidden bg-white px-4 py-20 md:py-32 lg:pt-40">
+    <section
+      id="home"
+      className="relative flex items-center overflow-hidden bg-white px-4 pb-12 pt-20 md:py-32 lg:pt-40"
+    >
       <Image
         src="/assets/Eucalyptus.png"
         alt=""

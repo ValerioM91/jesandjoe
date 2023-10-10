@@ -1,10 +1,9 @@
 import React from "react"
-import { useRouter } from "next/router"
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react"
 import DefaultErrorPage from "next/error"
 import Head from "next/head"
-import { BuilderContent } from "@builder.io/sdk"
-import { GetStaticProps } from "next"
+import type { BuilderContent } from "@builder.io/sdk"
+import type { GetStaticProps } from "next"
 import "../builder-registry"
 import Header from "@/sections/Header"
 
@@ -51,7 +50,6 @@ export async function getStaticPaths() {
 
 // Define the Page component
 export default function Page({ page }: { page: BuilderContent | null }) {
-  const router = useRouter()
   const isPreviewing = useIsPreviewing()
 
   // If the page content is not available
