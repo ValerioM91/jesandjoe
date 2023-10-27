@@ -68,12 +68,12 @@ const Mobile = ({ links, showRsvp }: { links?: TLink[]; showRsvp?: boolean }) =>
 
   return (
     <>
-      <ul className="relative z-20 flex items-center justify-between bg-jes-green md:hidden">
+      <div className="relative z-20 flex items-center justify-between bg-jes-green md:hidden">
         {showRsvp && <Rsvp onClick={handleCloseMenu} />}
         <IconButton className="text-white" onClick={() => setIsOpen(!isOpen)}>
           <FiMenu />
         </IconButton>
-      </ul>
+      </div>
       <MobileMenu isOpen={isOpen} onClose={handleCloseMenu} links={links} />
     </>
   )

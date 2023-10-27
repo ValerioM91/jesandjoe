@@ -10,7 +10,7 @@ const RichTextSection = ({ title, richText, id }: TRichTextSection) => {
       {title && <h2 className="text-center text-3xl font-light md:text-4xl lg:mb-8 lg:text-8xl">{title}</h2>}
       {richText && (
         <div
-          className="mx-auto max-w-5xl text-center font-light tracking-wide md:text-xl lg:text-3xl [&_strong]:font-semibold"
+          className="[&_a]:color:blue mx-auto max-w-5xl text-center font-light tracking-wide md:text-xl lg:text-3xl [&_strong]:font-semibold"
           dangerouslySetInnerHTML={{ __html: richText }}
         />
       )}
