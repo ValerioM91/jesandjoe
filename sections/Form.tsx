@@ -10,7 +10,7 @@ type TForm = {
 function Form({ subtitle, title, thankYouMessage }: TForm) {
   const [state, handleSubmit] = useForm("moqorrpo")
 
-  const labelClass = "text-white text-lg font-light md:text-xl lg:text-3xl"
+  const labelClass = "text-white text-center md:text-left text-lg font-light md:text-xl lg:text-2xl"
 
   return (
     <section id="rsvp" className="bg-jes-green">
@@ -61,7 +61,7 @@ function Form({ subtitle, title, thankYouMessage }: TForm) {
             <Button
               type="submit"
               disabled={state.submitting}
-              className="hover:bg-jes mx-auto block text-2xl font-bold uppercase tracking-wide text-white transition-all md:text-3xl"
+              className="hover:bg-jes mx-auto block font-bold uppercase tracking-wide text-white transition-all md:text-2xl"
             >
               Submit
             </Button>

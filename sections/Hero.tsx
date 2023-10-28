@@ -48,8 +48,8 @@ const WhereOrWhen = ({ text, title }: { text?: string; title: "Where" | "When" }
 
   return (
     <div className="mt-6 text-center lg:mt-12">
-      <p className="mb-1 font-semibold uppercase md:text-2xl lg:mb-2 lg:text-4xl">{title}</p>
-      <p className="whitespace-pre-wrap font-light md:text-xl lg:text-3xl">{text}</p>
+      <p className="mb-1 font-semibold uppercase md:text-2xl lg:mb-2 lg:text-3xl">{title}</p>
+      <p className="whitespace-pre-line font-light md:text-xl lg:text-2xl">{text}</p>
     </div>
   )
 }

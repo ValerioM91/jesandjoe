@@ -1,10 +1,13 @@
-import { Builder } from "@builder.io/react"
+import { Builder, withChildren } from "@builder.io/react"
 
 import Hero from "./sections/Hero"
 import Form from "./sections/Form"
 import Where from "./sections/Where"
 import RichTextSection from "./sections/RichTextSection"
 import Gifts from "./sections/Gifts"
+import Map from "./sections/Map"
+import Icons from "./sections/Icons"
+import { iconNames } from "./components/Icon"
 
 Builder.registerComponent(Hero, {
   name: "Hero",
@@ -57,5 +60,29 @@ Builder.registerComponent(Gifts, {
     { name: "link", type: "string" },
     { name: "linkText", type: "string" },
     { name: "richText", type: "richText" },
+  ],
+})
+
+Builder.registerComponent(Map, {
+  name: "Map",
+  image: "https://tabler-icons.io/static/tabler-icons/icons-png/map.png",
+  inputs: [{ name: "location", type: "string", required: true }],
+})
+
+Builder.registerComponent(withChildren(Icons), {
+  name: "Icons section",
+  canHaveChildren: true,
+  image: "https://tabler-icons.io/static/tabler-icons/icons-png/icons.png",
+  inputs: [
+    { name: "background", type: "enum", enum: ["white", "green"] },
+    { name: "title", type: "string" },
+    {
+      name: "icons",
+      type: "list",
+      subFields: [
+        { name: "icon", type: "enum", enum: iconNames, required: true },
+        { name: "text", type: "longText" },
+      ],
+    },
   ],
 })
