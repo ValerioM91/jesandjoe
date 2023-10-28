@@ -27,14 +27,14 @@ const Icons = ({ title, icons, background = "white", attributes }: TIcons) => {
             {title}
           </h2>
         )}
-        <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3">
+        <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 sm:grid-cols-3">
           {icons?.map((icon: IconProps, i) => (
             <Icon
               key={i}
               icon={icon.icon}
               text={icon.text}
               color={colors.icon}
-              className={i === icons.length - 1 && oddsIcons ? "col-span-2 md:col-span-1" : ""}
+              className={i === icons.length - 1 && oddsIcons ? "col-span-2 sm:col-span-1" : ""}
             />
           ))}
         </div>
