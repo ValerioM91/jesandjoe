@@ -1,6 +1,6 @@
-const Map = ({ location }: { location: string }) => {
+const Map = ({ location, attributes }: { location: string; attributes?: Attributes }) => {
   return (
-    <section id="map" className="bg-white px-0">
+    <section {...attributes} id="map" className="bg-white px-0">
       <div className="container mx-auto max-w-5xl px-4 text-center text-lg max-md:px-0">
         <iframe
           className="md:rounded-md"

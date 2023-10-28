@@ -6,11 +6,13 @@ type TGifts = {
   link?: string
   linkText?: string
   richText?: string
+  attributes?: Attributes
 }
 
-const Gifts = ({ content, title, link, linkText, richText }: TGifts) => {
+const Gifts = ({ content, title, link, linkText, richText, attributes }: TGifts) => {
   return (
     <section
+      {...attributes}
       id="gifts"
       className="flex flex-col items-center gap-6 bg-jes-green px-4 pb-10 pt-6 text-white md:py-12 lg:gap-11 lg:py-20"
     >

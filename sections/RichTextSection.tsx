@@ -2,11 +2,12 @@ type TRichTextSection = {
   title?: string
   richText?: string
   id?: string
+  attributes?: Attributes
 }
 
-const RichTextSection = ({ title, richText, id }: TRichTextSection) => {
+const RichTextSection = ({ title, richText, id, attributes }: TRichTextSection) => {
   return (
-    <section id={id} className="my-8 flex flex-col gap-6 px-4 md:my-12 lg:my-20 lg:gap-8">
+    <section {...attributes} id={id} className="my-8 flex flex-col gap-6 px-4 md:my-12 lg:my-16 lg:gap-8">
       {title && <h2 className="text-center text-3xl font-light md:text-4xl lg:mb-4 lg:text-7xl">{title}</h2>}
       {richText && (
         <div

@@ -5,15 +5,16 @@ type TForm = {
   title?: string
   subtitle?: string
   thankYouMessage?: string
+  attributes?: Attributes
 }
 
-function Form({ subtitle, title, thankYouMessage }: TForm) {
+function Form({ subtitle, title, thankYouMessage, attributes }: TForm) {
   const [state, handleSubmit] = useForm("moqorrpo")
 
   const labelClass = "text-white text-center md:text-left text-lg font-light md:text-xl lg:text-2xl"
 
   return (
-    <section id="rsvp" className="bg-jes-green">
+    <section {...attributes} id="rsvp" className="bg-jes-green">
       <div className="container mx-auto flex min-h-[20rem] max-w-[820px] flex-col justify-center px-4 py-16 text-lg lg:py-20">
         {state.succeeded ? (
           <p className="text-center text-lg text-white md:text-3xl">{thankYouMessage || "Thank you!"}</p>

@@ -19,6 +19,7 @@ Builder.registerComponent(Hero, {
     { name: "when", type: "string" },
     { name: "where", type: "longText" },
   ],
+  noWrap: true,
 })
 
 Builder.registerComponent(Form, {
@@ -29,6 +30,7 @@ Builder.registerComponent(Form, {
     { name: "subtitle", type: "string" },
     { name: "thankYouMessage", type: "longText", friendlyName: "Thank you message" },
   ],
+  noWrap: true,
 })
 
 Builder.registerComponent(Where, {
@@ -39,6 +41,7 @@ Builder.registerComponent(Where, {
     { name: "image", type: "file" },
     { name: "where", type: "longText" },
   ],
+  noWrap: true,
 })
 
 Builder.registerComponent(RichTextSection, {
@@ -49,6 +52,7 @@ Builder.registerComponent(RichTextSection, {
     { name: "richText", type: "richText", friendlyName: "content" },
     { name: "id", type: "string" },
   ],
+  noWrap: true,
 })
 
 Builder.registerComponent(Gifts, {
@@ -61,12 +65,14 @@ Builder.registerComponent(Gifts, {
     { name: "linkText", type: "string" },
     { name: "richText", type: "richText" },
   ],
+  noWrap: true,
 })
 
 Builder.registerComponent(Map, {
   name: "Map",
   image: "https://tabler-icons.io/static/tabler-icons/icons-png/map.png",
   inputs: [{ name: "location", type: "string", required: true }],
+  noWrap: true,
 })
 
 Builder.registerComponent(withChildren(Icons), {
@@ -85,4 +91,5 @@ Builder.registerComponent(withChildren(Icons), {
       ],
     },
   ],
+  noWrap: true,
 })
