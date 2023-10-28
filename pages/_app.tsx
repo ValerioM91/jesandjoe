@@ -4,7 +4,7 @@ import { Inter, Lavishly_Yours } from "next/font/google"
 import localFont from "next/font/local"
 
 const batang = localFont({
-  src: "../public/assets/batangLight.ttf",
+  src: "../public/assets/batangLight.woff2",
   variable: "--batang",
   display: "swap",
 })

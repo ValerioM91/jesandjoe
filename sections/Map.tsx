@@ -3,6 +3,7 @@ const Map = ({ location, attributes }: { location: string; attributes?: Attribut
     <section {...attributes} id="map" className="bg-white px-0">
       <div className="container mx-auto max-w-5xl px-4 text-center text-lg max-md:px-0">
         <iframe
+          title="Location Map"
           className="md:rounded-md"
           width="100%"
           height="600"
