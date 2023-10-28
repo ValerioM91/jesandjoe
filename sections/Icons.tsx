@@ -16,7 +16,7 @@ const Icons = ({ title, icons, background = "white", attributes }: TIcons) => {
   const oddsIcons = icons && icons.length % 2 === 1
 
   return (
-    <section {...attributes} className={`p mt-16 ${colors.background}`}>
+    <section {...attributes} className={`mt-16 ${colors.background}`}>
       <div
         className={`container mx-auto max-w-3xl px-4 ${
           background === "green" ? "py-4 md:py-8 lg:py-16" : "py-2 md:py-6 lg:py-12"
