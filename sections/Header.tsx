@@ -22,6 +22,8 @@ const Header = ({ sectionsNames, className }: { sectionsNames?: (string | undefi
     links.push({ link: "#gifts", label: "Gifts", delay: " delay-600" })
   }
 
+  links.push({ link: "/Menu.pdf", label: "Menu", delay: " delay-700" })
+
   const showRsvp = sectionsNames?.includes("Form")
 
   return (

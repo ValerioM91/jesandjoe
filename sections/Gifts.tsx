@@ -18,7 +18,7 @@ const Gifts = ({ content, title, link, linkText, richText, attributes }: TGifts)
     >
       {title && <h2 className="px-4 text-center text-3xl font-light md:text-4xl lg:text-7xl">{title}</h2>}
       {content && (
-        <p className="max-w-6xl whitespace-pre-line text-center font-light md:text-xl lg:text-2xl">{content}</p>
+        <p className="max-w-4xl whitespace-pre-line text-center font-light md:text-xl lg:text-2xl">{content}</p>
       )}
       {link && (
         <Link href={link} className="my-5 font-bold md:text-xl lg:text-2xl" target="_blank" rel="noreferrer">
