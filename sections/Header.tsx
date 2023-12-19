@@ -5,6 +5,7 @@ import Link from "../components/Link"
 import MenuLinks from "../components/MenuLinks"
 import MobileMenu from "../components/MobileMenu"
 import type { TLink } from "@/types"
+import { twMerge } from "tailwind-merge"
 
 const Header = ({ sectionsNames, className }: { sectionsNames?: (string | undefined)[]; className?: string }) => {
   const links: TLink[] = []
@@ -27,7 +28,7 @@ const Header = ({ sectionsNames, className }: { sectionsNames?: (string | undefi
   const showRsvp = sectionsNames?.includes("Form")
 
   return (
-    <header className={`fixed top-0 z-10 flex w-full bg-jes-green px-4 font-inter shadow-md ${className}`}>
+    <header className={twMerge("fixed top-0 z-10 flex w-full bg-jes-green px-4 font-inter shadow-md", className)}>
       <nav className="container m-auto max-w-5xl py-3 md:py-4">
         <Mobile links={links} showRsvp={showRsvp} />
         <Desktop links={links} showRsvp={showRsvp} />
@@ -72,7 +73,7 @@ const Mobile = ({ links, showRsvp }: { links?: TLink[]; showRsvp?: boolean }) =>
     <>
       <div className="relative z-20 flex items-center justify-between bg-jes-green md:hidden">
         {showRsvp && <Rsvp onClick={handleCloseMenu} />}
-        <IconButton className="text-white" onClick={() => setIsOpen(!isOpen)}>
+        <IconButton className="text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Open mobile nav">
           <FiMenu />
         </IconButton>
       </div>

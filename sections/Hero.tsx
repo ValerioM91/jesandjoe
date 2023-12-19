@@ -1,4 +1,5 @@
 import Image from "next/image"
+import heroImage from "../images/Eucalyptus.png"
 
 type THero = {
   firstPersonName: string
@@ -17,12 +18,13 @@ const Hero = ({ firstPersonName, secondPersonName, date, when, where, attributes
       className="relative flex items-center overflow-hidden bg-white px-4 pb-12 pt-20 md:py-32 lg:pt-40"
     >
       <Image
-        loading="lazy"
-        src="/assets/Eucalyptus.png"
+        priority
+        src={heroImage}
         alt=""
         className="absolute right-0 top-5 w-[30%] max-w-md sm:top-0 md:-top-2 lg:-top-4 xl:-top-12"
         width={460}
         height={735}
+        sizes="(max-width: 450px) 250px, (max-width: 768px) 300px, 460px"
       />
       <div className="container relative mx-auto max-w-5xl">
         <div>

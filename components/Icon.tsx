@@ -1,3 +1,4 @@
+import { twMerge } from "tailwind-merge"
 import * as SVGS from "./Svgs"
 
 export type IconProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -12,7 +13,7 @@ const Icon = ({ icon, text, color, className, ...rest }: IconProps) => {
   const Svg = SVGS[icon]
 
   return (
-    <div className={`text-center ${color} w-auto ${className}`} {...rest}>
+    <div className={twMerge("w-auto text-center", className, color)} {...rest}>
       <Svg className="mx-auto mb-2 h-20 w-20 md:mb-8" />
       <p className="whitespace-pre-line leading-snug">{text}</p>
     </div>

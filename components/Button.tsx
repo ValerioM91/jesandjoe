@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge"
+
 type TButton = React.ComponentPropsWithoutRef<"button">
 
 const Button = ({ children, className, type, disabled }: TButton) => {
@@ -5,9 +7,7 @@ const Button = ({ children, className, type, disabled }: TButton) => {
     <button
       type={type || "button"}
       disabled={disabled}
-      className={`rounded-full border-[1px] border-current px-8 py-2.5 md:min-w-[9rem] ${
-        className ? " " + className : ""
-      }`}
+      className={twMerge("rounded-full border-[1px] border-current px-8 py-2.5 md:min-w-[9rem]", className)}
     >
       {children}
     </button>
