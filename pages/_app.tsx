@@ -19,7 +19,7 @@ const lavishly = Lavishly_Yours({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${batang.variable} ${lavishly.variable} font-inter`}>
+    <main className={`${inter.variable} ${batang.variable} ${lavishly.variable} font-inter`} suppressHydrationWarning>
       <Component {...pageProps} />
     </main>
   )
